@@ -19,13 +19,13 @@
 
 // var, let, const
 
-var name = 'John Doe';
-console.log(name);
-name = 'Steve Smith';
-console.log(name);
+var name1 = 'Pat-io Furniture';
+console.log(name1);
+name1 = 'Steve-O';
+console.log(name1);
 
 // Init var
-var greeting;
-console.log(greeting);
-greeting = 'Hello';
-console.log(greeting);
+var salutation;
+console.log(Salutation);
+greeting = 'Ciao';
+console.log(salutation);
