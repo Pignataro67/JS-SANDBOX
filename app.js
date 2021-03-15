@@ -33,9 +33,9 @@ person.age = '32';
 
 // console.log(person);
 
-const numbers = [1, 2, 3, 4, 5];
-numbers.push(6);
-numbers = [1, 2, 3, 4, 5, 6]
+// const numbers = [1, 2, 3, 4, 5];
+// numbers.push(6);
+// numbers = [1, 2, 3, 4, 5, 6]
 
 // console.log(numbers);
 
@@ -54,4 +54,26 @@ let test;
 
 const sym = Symbol();
 
-console.log(typeof sym);
+// REFERENCE TYPES - Objects
+// Array
+const hobbies = ['movies', 'music']; // I do not unnderstand
+// Object literal
+const address = {
+  city: 'Boston',
+  state: 'MA'
+}
+const today = new Date();
+
+console.log(today);
+console.log(typeof today);
+
+let val;
+
+// Number to string
+val = String(555);
+val = String(4 + 4);
+
+// Output
+console.log(val);
+console.log(typeof val);
+console.log(val.length);
