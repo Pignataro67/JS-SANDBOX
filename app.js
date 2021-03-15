@@ -1,31 +1,31 @@
-// Log to console
-// console.log('Hello World');
-// console.log(123);
-// console.log(true);
-// var greeting = 'Hello';
-// console.log(greeting);
-// console.log([1, 2, 3, 4]);
-// console.log({a:1, b:2});
-// console.table({a:1, b:2});
+// letters, numbers, -, $
+// can't start with a number
+var _name = 'John'
 
-// console.error('This is some error');
-// console.clear();
+// Multi word vars
+var firstName = 'John'; // Camel Case
+var first_name = 'Sara'; // Underscore
+var FirstName = 'Tim'; // Pascal case
+var firstname; // not recommended
 
-/*
-  multi
-  line 
-  comments
-*/
+// LET
 
-// var, let, const
+let name = 'John Doe';
+console.log(name);
+name = 'Steve Smith';
+console.log(name);
 
-var name1 = 'Pat-io Furniture';
-console.log(name1);
-name1 = 'Steve-O';
-console.log(name1);
+// CONST
+const name = 'John';
+console.log(name);
+// Can't reassign
+name = 'Sara';
+// Have to assign value
+const greeting;
 
-// Init var
-var salutation;
-console.log(Salutation);
-greeting = 'Ciao';
-console.log(salutation);
+const person = {
+  name: 'John',
+  age: 30
+}
+
+console.log(person);
