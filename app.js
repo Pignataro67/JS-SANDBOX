@@ -1,7 +1,8 @@
 const firstName = 'Williams';
 const lastName = 'Johnson';
 const age = 42;
-const str = 'Hello there my name is Pat'
+const str = 'Hello there my name is Pat';
+const tags = 'web design, web development, programming';
 
 let val;
 
@@ -43,11 +44,21 @@ val = firstName.charAt(firstName.length - 1);
 // subString()
 val = firstName.substring(0,4);
 
-// slice
+// slice()
 val = firstName.slice(0, 4);
 val = firstName.slice(-3);
+val = firstName.slice(1, 3);
 
 //split()
 val = str.split(' ');
+val = tags.split(',');
+
+// relace()
+val = str.replace('Pat', 'Patricimo');
+val = str.replace('name', 'nombre');
+
+// includes()
+val = str.includes('Hello');
+val = str.includes('Bye');
 
 console.log(val);
