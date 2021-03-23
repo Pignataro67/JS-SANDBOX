@@ -15,4 +15,11 @@ val = today.getSeconds();
 val = today.getMilliseconds();
 val = today.getTime();
 
-console.log(val);
+birthday.setMonth(2);
+birthday.setDate(12);
+birthday.setFullYear(1979);
+birthday.setHours(3);
+birthday.setMinutes(30);
+birthday.setSeconds(25);
+
+console.log(birthday);
