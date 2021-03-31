@@ -29,4 +29,16 @@ val = document.images;
 val = document.scripts;
 val = documment.scripts[2].getAttributes('src');
 
+// let scripts = documment.scripts;
+
+// scripts.forEach(function(script) {
+//   console.log(script);
+// });  Does not work
+
+let scriptsArr = Array.from(scripts);
+
+scriptsArr.forEach(function(script) {
+  console.log(script.getAttribute('src'));
+}); // Works
+
 console.log(val);
