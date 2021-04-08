@@ -5,7 +5,7 @@ document.querySelector('.clear-tasks').addEventListener('click', function() {
 });
 
 document.querySelector('.clear-tasks').addEventListener('click', onclick);
-document.querySelector('.clear-tasks').addEventListener('mouseover', onclick);
+// document.querySelector('.clear-tasks').addEventListener('mouseover', onclick);
 
 function onClick(e) {
   //console.log('Clicked');
@@ -23,6 +23,17 @@ function onClick(e) {
 // e.target.innerText = 'Hello';
 // Event type
 val = e.type;
+
+// Timestamp
+val = e.timeStamp;
+
+// Coords event relative to the window
+val = e.clientY;
+val = e.clientX;
+
+// Coords event relative to the element(from button not window)
+val = e.offsetY;
+val = e.offsetX;
 
   console.log(val);
 }
