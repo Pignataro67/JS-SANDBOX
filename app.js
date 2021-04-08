@@ -5,6 +5,7 @@ document.querySelector('.clear-tasks').addEventListener('click', function() {
 });
 
 document.querySelector('.clear-tasks').addEventListener('click', onclick);
+document.querySelector('.clear-tasks').addEventListener('mouseover', onclick);
 
 function onClick(e) {
   //console.log('Clicked');
@@ -12,6 +13,16 @@ function onClick(e) {
   let val;
 
   val = e;
+
+  // Event target element
+  val = e.target;
+  val = e.target.id;
+  val = e.target.className;
+  val = e.target.classList;
+
+// e.target.innerText = 'Hello';
+// Event type
+val = e.type;
 
   console.log(val);
 }
