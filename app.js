@@ -1,39 +1,17 @@
-document.querySelector('.clear-tasks').addEventListener('click', function() {
-  console.log('Hello World');
+const clearBtn = document.querySelector('.clear-tasks');
+const card = document.querySelector('.card');
+const heading = document.querySelector('h5');
 
-  e.preventDefault();
-});
+// Click
+// clearBtn.addEventListener('click', runEvent);
+// DoubleClick
+// clearBtn.addEventListener('dbclick', runEvent);
+// MouseDown
+// clearBtn.addEventListener('mousedown', runEvent);
+// MouseUp
+clearBtn.addEventListener('mouseUp', runEvent);
 
-document.querySelector('.clear-tasks').addEventListener('click', onclick);
-// document.querySelector('.clear-tasks').addEventListener('mouseover', onclick);
-
-function onClick(e) {
-  //console.log('Clicked');
-
-  let val;
-
-  val = e;
-
-  // Event target element
-  val = e.target;
-  val = e.target.id;
-  val = e.target.className;
-  val = e.target.classList;
-
-// e.target.innerText = 'Hello';
-// Event type
-val = e.type;
-
-// Timestamp
-val = e.timeStamp;
-
-// Coords event relative to the window
-val = e.clientY;
-val = e.clientX;
-
-// Coords event relative to the element(from button not window)
-val = e.offsetY;
-val = e.offsetX;
-
-  console.log(val);
+// Event Handler
+function runEvent(e) {
+  console.log(`EVENT TYPE: ${e.type}`);
 }
