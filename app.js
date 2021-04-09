@@ -9,9 +9,21 @@ const heading = document.querySelector('h5');
 // MouseDown
 // clearBtn.addEventListener('mousedown', runEvent);
 // MouseUp
-clearBtn.addEventListener('mouseUp', runEvent);
+// clearBtn.addEventListener('mouseUp', runEvent);
+// Mouseenter
+card.addEventListener('mouseenter', runEvent);
+// Mouseleave
+card.addEventListener('mouseleave', runEvent);
+// Mouseover
+card.addEventListener('mouseover', runEvent);
+// Mouseout
+card.addEventListener('mouseout', runEvent);
+// Mousemove
+card.addEventListener('mousemove', runEvent);
 
 // Event Handler
 function runEvent(e) {
   console.log(`EVENT TYPE: ${e.type}`);
+
+  heading.innerHTML = `<h5></h5>`;
 }
