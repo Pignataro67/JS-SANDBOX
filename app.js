@@ -25,5 +25,24 @@ card.addEventListener('mousemove', runEvent);
 function runEvent(e) {
   console.log(`EVENT TYPE: ${e.type}`);
 
-  heading.innerHTML = `<h5></h5>`;
+  heading.textContent = `MouseX: ${e.offsetX} MouseY: ${e.offsetY}`;
+
+  document.body.style.backgroundColor = `rgb(${e.offsetX}, ${e.offsetY}, 40)`;
+}
+
+const form = document.querySelector('form');
+const taskInput = document.getElementById('task');
+
+// Clear input
+taskInput.value = '';
+
+form.addEventListener('submit', runEvent);
+
+function runEvent(e) {
+  console.log(`EVENT TYPE: ${e.type}`);
+
+  // Get input value
+  console.log(taskInput.value);
+
+  e.preventDefault();
 }
