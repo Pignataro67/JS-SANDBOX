@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 const taskInput = document.getElementById('task');
 const heading = document.querySelector('h5');
+const select = document.querySelector('select');
 
 // Clear input
 taskInput.value = '';
@@ -14,9 +15,17 @@ taskInput.value = '';
 // keypress
 // taskInput.addEventListener('keypress', runEvent);
 // Focus
-taskInput.addEventListener('focus', runEvent);
+// taskInput.addEventListener('focus', runEvent);
 // Blur
-taskInput.addEventListener('blur', runEvent);
+// taskInput.addEventListener('blur', runEvent);
+// Cut
+taskInput.addEventListener('cut', runEvent);
+// Paste
+taskInput.addEventListener('Paste', runEvent);
+// Input
+taskInput.addEventListener('change', runEvent);
+// Change
+select.addEventListener('change', runEvent);
 
 function runEvent(e) {
   console.log(`EVENT TYPE: ${e.type}`);
