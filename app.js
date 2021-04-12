@@ -1,17 +1,27 @@
-// Event Bubbling
+// // Event Bubbling
 
-document.querySepector('.card-title').addEventListener('click', function() {
-  console.log('card-title');
-});
+// document.querySelector('.card-title').addEventListener('click', function() {
+//   console.log('card-title');
+// });
 
-document.querySepector('.card-content').addEventListener('click', function() {
-  console.log('card-content');
-});
+// document.querySelector('.card-content').addEventListener('click', function() {
+//   console.log('card-content');
+// });
 
-document.querySepector('.card').addEventListener('click', function() {
-  console.log('card');
-});
+// document.querySelector('.card').addEventListener('click', function() {
+//   console.log('card');
+// });
 
-document.querySepector('.col').addEventListener('click', function() {
-  console.log('col');
-});
+// document.querySelector('.col').addEventListener('click', function() {
+//   console.log('col');
+// });
+
+// Event Delegation
+
+const delItem = document.querySelector('.delete-item');
+
+delItem.addEventListener('click', deleteItem);
+
+function deleteItem() {
+  console.log('delete item');
+}
