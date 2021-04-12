@@ -18,10 +18,24 @@
 
 // Event Delegation
 
-const delItem = document.querySelector('.delete-item');
+// const delItem = document.querySelector('.delete-item');
 
-delItem.addEventListener('click', deleteItem);
+// delItem.addEventListener('click', deleteItem);
 
-function deleteItem() {
-  console.log('delete item');
+document.body.addEventListener('click', deleteItem);
+
+function deleteItem(e) {
+  
+  // console.log(e.target);
+  // if (e.target.className === 'fa fa-remove') {
+  // console.log('delete item');
+    
+  // if (e.target.parentElement.className === 'delete-item secondary-item') {
+  //   console.log('delete item');
+  // }
+
+  if (e.target.parentElement.classList.contains('delete-item')) {
+    console.log('delete item');
+    e.target.parentElement.parentElement.remove();
+  }
 }
