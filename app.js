@@ -1,41 +1,17 @@
-const form = document.querySelector('form');
-const taskInput = document.getElementById('task');
-const heading = document.querySelector('h5');
-const select = document.querySelector('select');
+// Event Bubbling
 
-// Clear input
-taskInput.value = '';
+document.querySepector('.card-title').addEventListener('click', function() {
+  console.log('card-title');
+});
 
-// form.addEventListener('submit', runEvent);
+document.querySepector('.card-content').addEventListener('click', function() {
+  console.log('card-content');
+});
 
-// keydown
-// taskInput.addEventListener('keydown', runEvent);
-// keyup
-// taskInput.addEventListener('keyup', runEvent);
-// keypress
-// taskInput.addEventListener('keypress', runEvent);
-// Focus
-// taskInput.addEventListener('focus', runEvent);
-// Blur
-// taskInput.addEventListener('blur', runEvent);
-// Cut
-taskInput.addEventListener('cut', runEvent);
-// Paste
-taskInput.addEventListener('Paste', runEvent);
-// Input
-taskInput.addEventListener('change', runEvent);
-// Change
-select.addEventListener('change', runEvent);
+document.querySepector('.card').addEventListener('click', function() {
+  console.log('card');
+});
 
-function runEvent(e) {
-  console.log(`EVENT TYPE: ${e.type}`);
-
-  console.log(e.target.value);
-
-  // heading.innerText = e.target.value;
-
-  // Get input value
-  // console.log(taskInput.value);
-
-  // e.preventDefault();
-}
+document.querySepector('.col').addEventListener('click', function() {
+  console.log('col');
+});
