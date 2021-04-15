@@ -13,3 +13,19 @@ function loadEventListeners() {
   // Add task event
   form.addEventListener('submit', addTask);
 }
+
+// Add task
+function addTask(e) {
+  if(taskInput.value === '') {
+    alert('Add a task');
+  }
+
+  // Create li element
+  const li = document.createElement('li');
+  // Add class
+  li.className = 'collection-item';
+  // Create text mode and appennd to li
+  li.appendChild(document.createTextNode(taskInput.value));
+
+  e.preventDefault();
+}
