@@ -10,6 +10,8 @@ function loadEventListeners();
 
 // load all event listeners
 function loadEventListeners() {
+  // DOM Load event
+  document.addEventListener('DOMContenLoaded', getTasks); 
   // Add task event
   form.addEventListener('submit', addTask);
   // Remove task event
@@ -18,6 +20,16 @@ function loadEventListeners() {
   clearBtn.addEventListener('click', clearTasks);
   // Filter tasks event
   filter.addEventListener('keyup', filterTasks);
+}
+
+// Get Tasks from LS
+function getTasks() {
+  let tasks;
+  if (localStorage.getItem('tasks') === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+  }
 }
 
 // Add task
@@ -63,6 +75,8 @@ function storeTaskInLocalStorage(task) {
   }
 
   tasks.push(task);
+
+  localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 // Remove Task
