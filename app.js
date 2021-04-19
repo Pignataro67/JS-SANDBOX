@@ -103,9 +103,23 @@ function storeTaskInLocalStorage(task) {
 function removeTask(e) {
   if (e.target.parentElement.classList.contains('delete-item')) {
     if (confirm('Are You Sure?')) {
-  console.log(e.parentElement.parentElement.remove());
+  // console.log(e.parentElement.parentElement.remove());
+    e.target.parentElement.parentElement.remove();
+  
+    // Remove from LS
+    removeTaskFromLocalStorage(e.target.parentElement.parentElement)
     }
   }
+}
+
+// Remove from LS
+function removeTaskFromLocalStorage(taskItem) {
+  let tasks;
+  if (localStorage.getItem('tasks') === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+  }  
 }
 
 // Clear Tasks
