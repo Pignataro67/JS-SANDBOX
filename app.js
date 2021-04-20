@@ -120,6 +120,14 @@ function removeTaskFromLocalStorage(taskItem) {
   } else {
     tasks = JSON.parse(localStorage.getItem('tasks'));
   }  
+
+  tasks.forEach(function(task) {
+    if (taskItem.textContent === task) {
+      tasks.splice(index, 1);
+    }
+  });
+
+  localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 // Clear Tasks
@@ -130,6 +138,14 @@ function clearTasks() {
   while(taskList.firstChild) {
     taskList.removeChild(taskList.firstChild);
   }
+
+  // Clear from LS
+  clearTasksFromLocalStroage();
+}
+
+// Clear Tasks from LS
+function clearTasksFromLocalStroage() {
+  localStorage.clear();
 }
 
 // Filter Tasks
