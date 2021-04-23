@@ -30,6 +30,7 @@ if(isFinite(monthly)) {
 
   e.preventDefault();
 }
+
 // Show Error
 function showError(error) {
   // Create a div
@@ -37,10 +38,22 @@ function showError(error) {
 
   // Get elements
   const card = document.querySelector('.card');
-
+  const heading = document.querySelector('.heading');
+  
   // Add class
   errorDiv.className = 'alert alert-danger';
 
   // Create text node and append to div
   errorDiv.appendChild(document.createTextNode(error));
+
+  // INsert error above heading
+  card.insertBefore(errorDiv, heading);
+  
+  // Clear error after 3 seconds
+  setTimeout(clearError, 3000);
+}
+
+// Clear error
+function clearError() {
+  document.querySelector('.alert').remove();
 }
